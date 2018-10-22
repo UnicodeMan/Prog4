@@ -24,23 +24,21 @@ int main()
 	int n, skaitl1, vardl1, skaitl2, vardl2, suma1, suma2, skirt1, skirt2, sand1, sand2, dalm1, dalm2; //suma, skirt, sand, dalm;
 	// Užduočių skaičius (n), skaitikliai ir vardikliai 1-2, ,,,
 	// (suma, skirtumas, sandauga, dalmuo) - skaitiklio ir vardiklio
-    ifstream duom("duom_4-is-IT.txt");
-    ofstream  rez( "rez_4-is-it.txt");
-
-	cout << "Sveikas, Pasauli!";
-
+	ifstream duom("duom_4-is-IT.txt");
+	ofstream  rez( "rez_4-is-it.txt");
+	
 	duom >> n;
 
 	rez << " T1      T2      Suma   Skirtumas   Sandauga   Dalmuo" << endl;
-    rez << "----------------------------------------------------------" << endl;
+	rez << "----------------------------------------------------------" << endl;
 
 	for(int i=0; i < n; i++) {
-        duom >> skaitl1 >> vardl1 >> skaitl2 >> vardl2;
-        trupm_veiksmai(skaitl1, vardl1, skaitl2, vardl2, suma1, suma2, skirt1, skirt2, sand1, sand2, dalm1, dalm2);
-        rez  << skaitl1 << "/" << vardl1 << setw(7) << skaitl2 << "/" << vardl2 << setw(7) << suma1 <<  "/" << suma2 << setw(7) << skirt1 << "/" << skirt2 << setw(8) << sand1 << "/" << sand2 << setw(7) << dalm1 << "/" << dalm2 <<endl;
+        	duom >> skaitl1 >> vardl1 >> skaitl2 >> vardl2;
+        	trupm_veiksmai(skaitl1, vardl1, skaitl2, vardl2, suma1, suma2, skirt1, skirt2, sand1, sand2, dalm1, dalm2);
+        	rez  << skaitl1 << "/" << vardl1 << setw(7) << skaitl2 << "/" << vardl2 << setw(7) << suma1 <<  "/" << suma2 << setw(7) << skirt1 << "/" << skirt2 << setw(8) << sand1 << "/" << sand2 << setw(7) << dalm1 << "/" << dalm2 <<endl;
 	}
-    duom.close();
-    rez.close();
+    	duom.close();
+    	rez.close();
 	return 0;
 }
 void trupm_veiksmai(int skaitl1, int vardl1, int skaitl2, int vardl2, int &suma1, int &suma2, int &skirt1, int &skirt2, int &sand1, int &sand2, int &dalm1, int &dalm2){
